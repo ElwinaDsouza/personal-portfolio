@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalportfolio</title>
+    <!-- Pixelated / Tech Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <!-- <div class="logo">
+            <span class="logo-pixel">DEV </span>
+        </div> -->
+        <nav class="nav-links">
+            <button class="nav-btn active" data-tab="home">Home</button>
+            <button class="nav-btn" data-tab="projects">Projects</button>
+            <button class="nav-btn" data-tab="contact">Contact</button>
+        </nav>
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle theme">
+            <!-- Sun Icon (visible in dark mode) -->
+            <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (visible in light mode) -->
+            <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- ================= HOME TAB ================= -->
+        <section id="tab-home" class="tab-content active-tab">
+            <div class="asym-grid">
+                <!-- Profile / Bio Card -->
+                <div class="pixel-card profile-card">
+                    <!-- <div class="card-badge"></div> -->
+                    <h1>Hi, I'm <span class="highlight-text">Elwina</span></h1>
+                    <p class="subtitle">IT Beginner & Enthusiastic Learner</p>
+                    <p class="bio-text">
+                        Welcome to my personal portfolio! I build websites using HTML, CSS, and JS. Explore my
+                        projects or play my custom mini-game below!
+                    </p>
+
+                    <!-- Game Trigger Button -->
+                    <div class="game-launch-wrapper">
+                        <button id="launch-game-btn" class="arcade-btn">
+                            LAUNCH DEBUGGER GAME
+                        </button>
+                        <p class="game-hint">Catch errors before you lose!</p>
+                    </div>
+                </div>
+
+                <!-- Quick Skills Card -->
+                <div class="pixel-card skills-card">
+                    <h2> Tech Stack</h2>
+                    <ul class="skills-list">
+                        <li><span class="skill-dot"></span> HTML5</li>
+                        <li><span class="skill-dot"></span> CSS3</li>
+                        <li><span class="skill-dot"></span> JavaScript (ES6)</li>
+                        <li><span class="skill-dot"></span> Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS TAB ================= -->
+        <section id="tab-projects" class="tab-content">
+            <div class="section-header">
+                <h2>My Projects</h2>
+            </div>
+
+            <!-- Skeleton Loading Animation Container -->
+            <div id="skeleton-container" class="projects-grid">
+                <div class="skeleton-card">
+                    <div class="skeleton-img"></div>
+                    <div class="skeleton-line title"></div>
+                    <div class="skeleton-line text"></div>
+                    <div class="skeleton-line text short"></div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-img"></div>
+                    <div class="skeleton-line title"></div>
+                    <div class="skeleton-line text"></div>
+                    <div class="skeleton-line text short"></div>
+                </div>
+            </div>
+
+            <!-- Actual Projects Container (hidden initially for skeleton demo) -->
+            <div id="real-projects-container" class="projects-grid hidden">
+                <!-- Project 1 -->
+                <div class="pixel-card project-card">
+                    <div class="project-thumb-container">
+                        <img src="cafe.png" alt="Error Catcher Game Thumbnail" class="project-img">
+                        <!-- <span class="thumb-tag">JS Canvas</span> -->
+                    </div>
+                    <div class="project-info">
+                        <h3>Cafe Walnut</h3>
+                        <p>A responsive Mobile-First Demo Cafe Website made with HTML, JS and CSS</p>
+                        <div class="tag-row">
+                            <span class="tag">HTML5 Canvas</span>
+                            <span class="tag">JS</span>
+                        </div>
+                        <a href="https://elwinadsouza.github.io/Cafe-Website/" class="view-btn">View</a>
+                    </div>
+                </div>
+
+                <!-- Project 2
+                <div class="pixel-card project-card">
+                    <div class="project-thumb thumb-2">
+                        <span class="thumb-tag">Web App</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Tracker</h3>
+                        <p>A minimalist to-do list application with local browser data storage.</p>
+                        <div class="tag-row">
+                            <span class="tag">DOM Manipulation</span>
+                            <span class="tag">LocalStorage</span>
+                        </div>
+                        <a href="https://github.com" target="_blank" class="view-btn">View</a>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- ================= CONTACT TAB ================= -->
+        <section id="tab-contact" class="tab-content">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <p>Find my code repositories and professional profile online.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- GitHub Card -->
+                <a href="https://github.com/ElwinaDsouza" target="_blank" class="pixel-card contact-card">
+                    <div class="contact-icon">
+                        <svg class="svg-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <!-- <p>Check out my code repositories and open-source contributions.</p> -->
+                    <span class="link-arrow">Visit Profile &rarr;</span>
+                </a>
+                <!-- LinkedIn Card -->
+                <!-- <a href="https://linkedin.com" target="_blank" class="pixel-card contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally and follow my tech learning journey.</p>
+                    <span class="link-arrow">Visit Profile &rarr;</span>
+                </a> -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= GAME MODAL ================= -->
+    <div id="game-modal" class="modal-overlay hidden">
+        <div class="modal-box pixel-card">
+            <div class="modal-header">
+                <h3>ERROR CATCHER</h3>
+                <button id="close-game-btn" class="close-btn">&times;</button>
+            </div>
+
+            <div class="game-hud">
+                <div>LIVES: <span id="lives-display">❤️❤️❤️</span></div>
+                <div>SCORE: <span id="score-display">0000</span></div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="gameCanvas" width="360" height="420"></canvas>
+
+                <!-- Overlay for Start / Game Over -->
+                <div id="game-overlay" class="game-overlay-screen">
+                    <h2 id="overlay-title">READY TO DEBUG?</h2>
+                    <p id="overlay-desc">Use Mouse/Touchpad or Arrow Keys to catch falling errors!</p>
+                    <button id="start-game-btn" class="arcade-btn green-btn">START GAME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
